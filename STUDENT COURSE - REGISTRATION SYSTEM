@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+class Course {
+    String code;
+    String title;
+    String description;
+    int capacity;
+    String schedule;
+}
+
+class Student {
+    String id;
+    String name;
+    String[] registeredCourses = new String[5];
+}
+
+public class CourseRegistrationSystem {
+    static Course[] courses = new Course[10];
+    static Student[] students = new Student[10];
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        // Initialize courses and students here
+
+        while (true) {
+            System.out.println("1. List courses");
+            System.out.println("2. Register for a course");
+            System.out.println("3. Drop a course");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    listCourses();
+                    break;
+                case 2:
+                    registerCourse();
+                    break;
+                case 3:
+                    dropCourse();
+                    break;
+                case 4:
+                    System.exit(0);
+            }
+        }
+    }
+
+    static void listCourses() {
+        // List all courses here
+    }
+
+    static void registerCourse() {
+        // Register a student for a course here
+    }
+
+    static void dropCourse() {
+        // Drop a course for a student here
+    }
+}
